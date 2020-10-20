@@ -5,6 +5,8 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
+    "clean": "rm -rf build",
+    "pretest": "npm run clean",
     "test": "jest --config jestconfig.json --coverage",
     "build": "npm run test && tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
